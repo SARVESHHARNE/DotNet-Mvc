@@ -1,0 +1,50 @@
+@using App.Models;
+
+@{
+
+    <h1>Log in</h1>
+    <hr>
+    <form method="post" asp-action="Add" asp-controller="Gym">
+        <Table>
+            <tr>
+                <td>Name: </td>
+                <td><input type="text" name="Name" value=""></td>
+            </tr>
+            <tr>
+                <td>Email: </td>
+                <td><input type="text" name="Email" value=""></td>
+            </tr>
+            <tr>
+                <td>Mobile: </td>
+                <td><input type="text" name="MobileNumber" value=""> </td>
+            </tr>
+            <tr>
+                <td>Address: </td>
+                <td><input type="text" name="Address" value=""> </td>
+            </tr>
+            <tr>
+                <td>Specialization: </td>
+                <td><input type="text" name="Special" value=""> </td>
+            </tr>
+            <tr>
+                <td> Experience:</td>
+                <td> <input type="number" name="Exp" value="">
+            <tr>
+                <td>Renumeration: </td>
+                <td><input type="text" name="Remuneration" value=""> </td>
+            </tr>
+            <tr>
+                <td>Status: </td>
+                <td><select name="Status">
+                        <option value="@Status.ACTIVE">Active</option>
+                        <option value="@Status.INACTIVE">InActive</option>
+                        <option value="@Status.ONLEAVE">OnLeave</option>
+                    </select></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><input type="submit" value="Add"></td>
+            </tr>
+        </Table>
+    </form>
+}

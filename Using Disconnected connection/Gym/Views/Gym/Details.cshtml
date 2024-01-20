@@ -1,0 +1,17 @@
+@using App.Models;
+
+@{
+    Trainer t=Model;
+    <h1>Hello @t.Name</h1>
+    <hr>
+    <p>Name : @t.Name</p>
+    <p>Email : @t.Email</p>
+    <p>MoNO : @t.MobileNumber</p>
+    <p>Address : @t.Address</p>
+    <p>Specialization : @t.Special</p>
+    <p>Experience : @t.Exp</p>
+    <p>Joining : @t.Joining</p>
+    <p>Remuneration : @t.Remuneration</p>
+    <p>Status : @t.Status</p>
+    <a href="/gym/edit/@t.Id">Edit</a>
+}

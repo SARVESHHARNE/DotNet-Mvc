@@ -1,0 +1,55 @@
+@using App.Models;
+
+@{
+    Trainer t = Model;
+
+    <h1>Log in</h1>
+    <hr>
+    <form method="post" asp-action="Edit" asp-controller="Gym">
+        <Table>
+            <tr>
+                <td>Id :</td>
+                <td><input type="text" name="Id" value="@t.Id" readonly> </td>
+            </tr>
+            <tr>
+                <td>Name :</td>
+                <td><input type="text" name="Name" value="@t.Name" readonly> </td>
+            </tr>
+            <tr>
+                <td>Email: </td>
+                <td><input type="text" name="Email" value="@t.Email"></td>
+            </tr>
+            <tr>
+                <td>Mobile: </td>
+                <td><input type="text" name="MobileNumber" value="@t.MobileNumber"> </td>
+            </tr>
+            <tr>
+                <td>Address: </td>
+                <td><input type="text" name="Address" value="@t.Address"> </td>
+            </tr>
+            <tr>
+                <td>Specialization: </td>
+                <td><input type="text" name="Special" value="@t.Special"> </td>
+            </tr>
+            <tr>
+                <td> Experience:</td>
+                <td> <input type="number" name="Exp" value="@t.Exp">
+            <tr>
+                <td>Renumeration: </td>
+                <td><input type="text" name="Remuneration" value="@t.Remuneration"> </td>
+            </tr>
+            <tr>
+                <td>Status: </td>
+                <td><select name="Status">
+                        <option value="@Status.ACTIVE">Active</option>
+                        <option value="@Status.INACTIVE">InActive</option>
+                        <option value="@Status.ONLEAVE">OnLeave</option>
+                    </select></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><input type="submit" value="Submit"></td>
+            </tr>
+        </Table>
+    </form>
+}

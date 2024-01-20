@@ -1,0 +1,25 @@
+@using App.Models;
+
+@{
+    List<Trainer> trainers=Model;
+    <h1>Welcome To Gym</h1>
+    <hr>
+    <a href="/gym/sort">Sort by Status</a>
+    <hr>
+    <table>
+        <Tr>
+            <th>Trainer_name</th>
+            <th>#</th>
+            <th>#</th>
+        </Tr>
+        @foreach(Trainer t in trainers){
+            <Tr>
+            <td>@t.Name</td>
+            <td><a href="/gym/login/@t.Id">Login</a></td>
+            <td><a href="/gym/Delete/@t.Id">Delete</a></td>
+        </Tr>
+        }
+    </table>
+
+    <a href="/gym/add">New Trainer</a>
+}

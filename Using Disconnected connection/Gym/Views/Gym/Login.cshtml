@@ -1,0 +1,30 @@
+@using App.Models;
+
+
+@{
+    Trainer t=Model;
+
+    <h1>Log in</h1>
+    <hr>
+    <form method="post" asp-action="Login" asp-controller="Gym" >
+        <Table>
+            <tr>
+                <td>Id :</td>
+                <td><input type="text" name="Id" value="@t.Id" readonly> </td>
+            </tr>
+            <tr>
+                <td>userName :</td>
+                <td><input type="text" name="Email" value="@t.Email" readonly> </td>
+            </tr>
+            <tr>
+                <td>Password: </td>
+                <td><input type="text" name="MobileNumber" value=""></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><input type="submit" value="Login"></td>
+            </tr>
+        </Table>
+    </form>
+
+}

@@ -1,0 +1,11 @@
+create table gym (id int auto_increment primary key,
+    name varchar(30),
+    email varchar(60),
+    mobile varchar(30),
+    address varchar(60),
+   special varchar(60),
+   exp int,
+   joining date,
+   remuneration varchar(60),
+  status varchar(30)
+  );
